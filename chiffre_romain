@@ -1,0 +1,44 @@
+def chiffre_decimal (val):
+    if val == 1:
+        return ("I")
+
+    if val > 1 and val < 5 :
+        chiffre = ""
+        for i in range (val):
+            chiffre = chiffre + "I"
+        return (chiffre)
+    if val == 5:
+        return ("V")
+
+    if val > 5 and val < 9:
+        chiffre ="V"
+        val = val - 5
+        for i in range (val):
+            chiffre = chiffre + "I"
+        return chiffre
+
+def dizaine_decimal (val): 
+    if val == 10:
+        return ("X")
+
+    if val > 10 and val < 50 :
+        chiffre = ""
+        for i in range (val):
+            chiffre = chiffre + "X"
+        return (chiffre)
+    if val == 50:
+        return ("L")
+
+    if val > 50 and val < 99:
+        chiffre ="V"
+        val = val - 5
+        for i in range (val):
+            chiffre = chiffre + "V"
+        return chiffre
+    uni = val%10
+    print (chiffre+chiffre_decimal(uni))
+
+
+
+
+chiffre_decimal(20)
